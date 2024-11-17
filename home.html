@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f6d365, #fda085, #fbc2eb, #ff9a9e);
+            animation: gradient 8s infinite alternate;
+            color: white;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 100%;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Content Section */
+        .content {
+            margin-top: 100px;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 products per row */
+            gap: 20px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInCard 1s ease-in-out;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInCard {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .product-card p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        /* Product Details Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .modal img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .modal h3 {
+            margin: 10px 0;
+        }
+
+        .modal p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .modal button {
+            background: #6a11cb;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .modal button:hover {
+            background: #2575fc;
+        }
+
+        .close {
+            background: #ff4c4c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .social{
+    margin-left: 8%;
+    margin-top: 100px;
+}
+.social a{
+    font-size: 35px;
+    color: black;
+    margin-right: 20px;
+}
+.social a:hover{
+    color: darkred;
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="products.html">Products</a>
+        <a href="offers.html">Offers</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h1>Welcome to the Home Page!</h1>
+        <p>Explore our latest products with amazing prices and offers!</p>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+        <!-- Replace this content with your own product details -->
+        <script>
+            const products = [
+                { name: "PURPULE Shirt", image: "https://res.cloudinary.com/dacgtogmv/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1729103889/MSH-1295_k8kzqp.webp", price: "499" },
+                { name: "YELLOW SQUARES 21A", image: "https://res.cloudinary.com/dacgtogmv/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1731826979/download_1_ms09x2.jpg", price: "1299" },
+                { name: "ZARA PURPULE SS", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1729181957/final_8e233dea-27be-4183-bca0-441406529afa_ltneox.webp", price: "299" },
+                { name: "Men's Black&White T- shirt", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731827971/images_1_mqcxz2.jpg", price: "299" },
+                { name: "Men's white Shirt ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731827973/portrait-handsome-smiling-hipster-businessman-model-wearing-casual-summer-white-shirt_158538-1003_modrvf.avif", price: "699" },
+                { name: "White T-Shirt", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828391/tshirt-8726716_640_wsu8jx.webp", price: "199" },
+                { name: "Men's Three Shirts combo", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828391/download_4_h2j7vd.jpg", price: "750" },
+                { name: "Reb Shirt XL", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828391/download_2_xnzrvm.jpg", price: "169" },
+                { name: "Men's Shirt and Pant 1-pair", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828390/download_5_ufbyqr.jpg", price: "999" },
+                { name: "Three Colourfull T-Shirts For men ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828391/download_3_f04bii.jpg", price: "399" },
+                { name: "Men's T-Shirt with cargo pant and full combo of accesserioes", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828983/download_9_fuek67.jpg", price: "820" },
+                { name: "Formal White Shirt with Black Cotton Pant", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828982/download_10_npxglj.jpg", price: "1030" },
+                { name: "Office Wear For men's", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828983/download_6_yz1v5e.jpg", price: "650" },
+                { name: "Men's Cargo pant", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829664/download_13_hlv8cb.jpg", price: "499" },
+                { name: "Black Colour Pant&Shirt Combo", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829666/download_11_u71755.jpg", price: "1100" },
+                { name: "Formal Dress For Men's", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829665/download_12_zpjycu.jpg", price: "899" },
+                { name: "Men's Cargo Pant& T-Shirt Combo", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829662/download_15_lpkzke.jpg", price: "600" },
+                { name: "Stylish Men Cargo pant", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829664/download_14_bxxdsm.jpg", price: "375" },
+                { name: "Womens stylish Fromals ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829664/images_5_b3rdff.jpg", price: "890" },
+                { name: "Men's Cargoes Combo ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829664/download_17_iuvutk.jpg", price: "799" },
+                { name: "Women's Modern Wear", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829657/download_16_z3gemu.jpg", price: "999" },
+                { name: "Men's Formal 3-Shirts", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829659/images_4_dbcpdx.jpg", price: "780" },
+                { name: "White Formal wear For Men's", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731828983/download_7_czzm5w.jpg", price: "560" },
+                { name: "Men's Formal wear and Office wear", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731829664/images_3_zw2ruw.jpg", price: "669" },
+                { name: "2 cargo combo for mens", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830618/download_20_dnbetw.jpg", price: "599" },
+                { name: "Men's three Shirts Combo with Different designs", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830862/download_23_jwbt7c.jpg", price: "1250" },
+                { name: "women's black Cargo ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830617/download_22_gcv9ma.jpg", price: "499" },
+                { name: "Men's Greenish Flexible Shirt&pant ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830861/download_24_pmnl8w.jpg", price: "850" },
+                { name: "Men's White shirt", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830862/download_26_gn3uw2.jpg", price: "199" },
+                { name: "Men's Light Greenish Pant ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830862/images_7_ihxfzf.jpg", price: "399" },
+                { name: "Ladies Cargo ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830617/images_6_wqfsrv.jpg", price: "499" },
+                { name: "Womens North Indian wear", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830617/download_21_zdnujj.jpg", price: "599" },
+                { name: "Men's Formal wear and office ", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830861/download_25_xf29ce.jpg", price: "899" },
+                { name: "Men's Black Cargo", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731830618/download_19_vh0gcx.jpg", price: "499" },
+                { name: "Stylish Shirt For men", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731831989/images_9_jatelw.jpg", price: "299" },
+                { name: "Men's Brown Formal Shirt", image: "https://res.cloudinary.com/dacgtogmv/image/upload/v1731831992/images_8_tzdb4g.jpg", price: "350" },
+
+                
+                
+            ];
+
+            document.write(
+                products.map(product => `
+                    <div class="product-card" onclick="showProduct('${product.name}', 'This is ${product.name}.', '${product.image}', '${product.price}')">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>Price: ₹${product.price}</p>
+                    </div>
+                `).join('')
+            );
+        </script>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal()">×</button>
+            <img id="productImage" src="" alt="">
+            <h3 id="productName"></h3>
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
+            <button>Buy Now</button>
+        </div>
+    </div>
+
+    <script>
+        function showProduct(name, description, image, price) {
+            document.getElementById('productName').innerText = name;
+            document.getElementById('productDescription').innerText = description;
+            document.getElementById('productImage').src = image;
+            document.getElementById('productPrice').innerText = `Price: ₹${price}`;
+            document.getElementById('productModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+    </script>
+    
+</body>
+</html>

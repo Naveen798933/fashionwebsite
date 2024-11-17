@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers</title>
+    <style>
+        /* Basic reset and styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #222;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: #ff4500;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Summary Section */
+        .offers-summary {
+            margin-bottom: 50px;
+            text-align: center;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .offer-text h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ff4500;
+        }
+
+        .offer-text p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Offer items */
+        .offers-list {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .offer-item {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .offer-item h3 {
+            font-size: 1.8rem;
+            color: #ff6347;
+            margin-bottom: 10px;
+        }
+
+        .offer-item p {
+            color: #ddd;
+        }
+
+        .offer-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Fire Effect Animation */
+        .fire-animation p {
+            font-size: 2rem;
+            color: #ff6347;
+            font-weight: bold;
+            text-align: center;
+            animation: fire 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fire {
+            0% {
+                text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff6347;
+            }
+            100% {
+                text-shadow: 0 0 20px #ff4500, 0 0 40px #ff4500, 0 0 60px #ff6347;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔥 Hot Offers Just For You! 🔥</h1>
+        </header>
+
+        <section class="offers-summary">
+            <div class="offer-text">
+                <h2>The Best Deals You Can't Miss!</h2>
+                <p>Welcome to our exclusive offers page, where we bring you the greatest discounts and unbeatable deals on our best products. Enjoy shopping with us and take advantage of our exciting offers!</p>
+            </div>
+
+            <div class="offers-list">
+                <div class="offer-item">
+                    <h3>🔥 50% OFF on all Orders!</h3>
+                    <p>Get amazing discounts on your favorite products. Limited time only!</p>
+                </div>
+                <div class="offer-item">
+                    <h3>🔥 Buy One Get One Free!</h3>
+                    <p>Grab the best deals with our BOGO offer. Don't miss out!</p>
+                </div>
+                <div class="offer-item">
+                    <h3>🔥 Extra 20% OFF on First Orders!</h3>
+                    <p>Sign up now and enjoy additional savings on your first purchase!</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fire-effects">
+            <div class="fire-animation">
+                <p>🔥 Your shopping experience just got a whole lot hotter! 🔥</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Developed by Kota Naveen</p>
+        </footer>
+    </div>
+
+    <script>
+        // For additional effects, fire effects animation is controlled by CSS in this case.
+    </script>
+</body>
+</html>

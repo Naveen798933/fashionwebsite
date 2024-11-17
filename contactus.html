@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #6a0dad;
+      color: white;
+      padding: 20px 10px;
+      text-align: center;
+      animation: fadeInHeader 1.5s ease-out;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: slideUp 1s ease-out;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #6a0dad;
+      text-align: center;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    label {
+      font-size: 16px;
+      margin-bottom: 5px;
+      display: block;
+      color: #555;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #6a0dad;
+      box-shadow: 0 0 8px rgba(106, 13, 173, 0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #6a0dad;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2s ease-out;
+    }
+
+    button:hover {
+      background-color: #540b86;
+    }
+
+    /* Animation for form elements */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInHeader {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      animation: fadeInFooter 2s ease-out;
+    }
+
+    .footer-content {
+      margin-bottom: 20px;
+    }
+
+    .footer-content p {
+      margin: 0;
+    }
+
+    .social a {
+      color: white;
+      font-size: 20px;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social a:hover {
+      transform: scale(1.2);
+      color: #6a0dad;
+    }
+
+    /* Background animation */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #6a0dad, #ff8c00);
+      animation: moveBackground 4s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0 0; }
+    }
+
+    @keyframes fadeInFooter {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Contact Us</h1>
+</header>
+
+<div class="container">
+  <h2>Feel free to ask any question</h2>
+  <form action="#" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 Kota Naveen. All Rights Reserved.</p>
+  </div>
+  <div class="social">
+    <a href="https://www.instagram.com/mrposion.x?igsh=b2Zyb2didWZhZ2E="><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.facebook.com/profile.php?id=100035462117614&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://wa.me/qr/6DU7QUEO5BPSH1"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://www.linkedin.com/in/naveen-kota-b72949294"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://youtube.com/@telugumoneymakers?si=UX2K9xRHnp6kOT6e"><i class="fa-brands fa-youtube"></i></a>
+    <a href="mailto:naveenkota68@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</footer>
+
+</body>
+</html>
